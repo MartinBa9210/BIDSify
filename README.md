@@ -26,8 +26,27 @@ $ ls /Users/JohnDoe/Work/BIDS_project
 $ sub-s1001 sub-s1002 sub-s1003
 ``` 
 
-The interaction with the user was kept to a minimum, which results in compromisses in recognzing sequences used and naming them in the .json side car. Therefor, all seqences, except Resting State, will be named according their DICOM folder name. Futur updates will improve this concept.
-BIDSify will promt the given options ans provide a summary on Spin-Echo Fieldmaps measured in AP/PA were found in the correct configuration and SBref sequences if there are any. Further it lists the sequences, not recognized by the script. Futur updates will treat them as well.
+The interaction with the user was kept to a minimum, which results in compromisses in recognzing the sequences used and naming them in the corresponding .json side cars. Substrings recognized for processing so far are (upper case as well as lower case):
+
+* T1
+* T2
+* fMRI
+* EPI
+* BOLD
+* dMRI
+* DTI
+* DWI
+* spin (for spin echo fieldmaps)
+
+Certain substrings marking sequences that don't need to be processed are the following:
+
+* localizer
+* scout
+* setter
+* distortion
+
+Therefor, all seqences, except Resting State, will be named according their DICOM folder name. Futur updates will improve this concept.
+BIDSify will promt the given options and provide a summary on Spin-Echo Fieldmaps measured in AP/PA were found in the correct configuration and SBref sequences if there are any. Further it lists the sequences, not recognized by the script. Futur updates will treat them as well.
 
 
     
