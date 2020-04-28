@@ -8,9 +8,7 @@ It is necessary to download dcm2niix ([dcm2niix releases](https://github.com/ror
 Calling the script without any flag enlists the options
 `$ BIDSify.sh`
 
-* -p <path to .dcm data>
-* -s <session number>
-* -o <output path>
+* -p <path to .dcm data> * -s <session number> * -o <output path>
   
 The given output path will be scanned and missing or consecutive sessions will be added. If no output path was specified, the BIDS-structure will be created in /datasets within your input folder.
 
