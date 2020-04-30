@@ -48,5 +48,8 @@ Certain substrings marking sequences that don't need to be processed are the fol
 Therefor, all seqences, except Resting State, will be named according their DICOM folder name. Futur updates will improve this concept.
 BIDSify will promt the given options and provide a summary on Spin-Echo Fieldmaps measured in AP/PA were found in the correct configuration and SBref sequences if there are any. Further it lists the sequences, not recognized by the script. Futur updates will treat them as well.
 
-
+## Approach and acknowlegdements
     
+Dear community, I hope this little script is in some way helpful. Still it is in a piloting period and I encourage everyone to report bugs you find along your way of using it. I will keep it updated.
+
+This work was created at Charité - Universitätsmedizin Berlin, Institut für Medizinische Psychologie.
