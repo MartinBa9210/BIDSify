@@ -45,7 +45,7 @@ Certain substrings marking sequences that don't need to be processed are the fol
 * setter
 * distortion
 
-Therefor, all seqences, except Resting State, will be named according their DICOM folder name. Futur updates will improve this concept.
+Therefore, all seqences, except Resting State, will be named according their DICOM folder name. Futur updates will improve this concept.
 BIDSify will promt the given options and provide a summary on Spin-Echo Fieldmaps measured in AP/PA were found in the correct configuration and SBref sequences if there are any. Further it lists the sequences, not recognized by the script. Futur updates will treat them as well.
 
 ## Approach and acknowlegdements
