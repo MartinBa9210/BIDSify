@@ -23,6 +23,7 @@
 # - get interaction if session ID is wrong or not provided
 # 0.6 - SBref and AP/PA get checked and warnings are displayed if there is a mismatch. SBref get recognized during processing.
 # 0.7 - dicoms will be transformed and related to the BIDS structure according their namings and json side cars will be manipulated
+# 0.7.1 - bugfix -- no file ending in intended for field of the field map side car
 
 echo "Welcome to your BIDS-Structure helper"
 
@@ -534,7 +535,7 @@ echo "--------------- end of overview ----------------"
             let runlen=runlen-1
             runIDRS=${runIDRS:$runlen:1}
             let indtaskTagArr=indtaskTagArr+1
-            cleanEPIseqName[$indcleanEPIseqName]="ses-"$sessionID"/func/sub-"${subjects[$counter]}"_ses-"$sessionID"_task-"$taskTag"_run-"$runIDRS"_bold"
+            cleanEPIseqName[$indcleanEPIseqName]="ses-"$sessionID"/func/sub-"${subjects[$counter]}"_ses-"$sessionID"_task-"$taskTag"_run-"$runIDRS"_bold.nii.gz"
             dcm2niix -v n -b y -z y -o $outpath"sub-"${subjects[$counter]}"/ses-"$sessionID"/func/" -f "sub-"${subjects[$counter]}"_ses-"$sessionID"_task-"$taskTag"_run-"$runIDRS"_bold" $d$c
             sed -i '' -e '$ d' $outpath"sub-"${subjects[$counter]}"/ses-"$sessionID"/func/sub-"${subjects[$counter]}"_ses-"$sessionID"_task-"$taskTag"_run-"$runIDRS"_bold.json"
             lastline=$(tail -n 1 $outpath"sub-"${subjects[$counter]}"/ses-"$sessionID"/func/sub-"${subjects[$counter]}"_ses-"$sessionID"_task-"$taskTag"_run-"$runIDRS"_bold.json")
